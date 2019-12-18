@@ -26,20 +26,24 @@
 
   <h1> WebVMEC </h1> <br>
 
-  <form>
+<!-- text fields used for some form data just for testing purposes -->
+  <form id="experiment-form">
     Experiments:
     <!-- available experiments to be added and loaded here -->
+     <input type="text" name="experiments">
     <br>
     <hr>
 
     Tasks:
     <!-- available experiments to be added and loaded here -->
+     <input type="text" name="tasks">
     <br>
     <hr>
 
     Task Type:
     <br>
     <select name="task-types">
+      <option value="default"></option>
       <option value="cursor">Cursor</option>
       <option value="no-cursor">No Cursor</option>
       <option value="error-clamp">Error Clamp</option>
@@ -51,9 +55,95 @@
 
     Pre-Trial Action: <input type="checkbox"> </input>
 
+    <br>
+    <hr>
+
+    Number of Targets:
+    <br>
+    <select name="num-targets">
+      <option value="default"></option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+    </select>
+
+    <br>
+    <hr>
+
+    Minimum T-Angle:
+    <input type="text" name="min-t-angle">
+    <br>
+    <hr>
+
+    Maximum T-Angle:
+    <input type="text" name="max-t-angle">
+    <br>
+    <hr>
+
+    Target Distance %:
+    <input type="text" name="target-dist">
+    <br>
+    <hr>
+
+    Rotation:
+    <input type="text" name="rot">
+    <br>
+    <hr>
+
+    Rotation Change:
+    <br>
+    <select name="rot-change-types">
+      <option value="default"></option>
+      <option value="cursor">Abrupt</option>
+      <option value="no-cursor">Gradual</option>
+    </select>
+
+    <br>
+    <hr>
+
+    Terminal Feedback: <input type="checkbox"> </input>
+
+    <br>
+    <hr>
+
+    Accuracy Rewards: <input type="checkbox"> </input>
+
+    <br>
+    <hr>
+
+    <input type="submit" value="Begin Experiment">
 
   </form>
 
   </p>
+
+  <script type="text/javascript">
+  // Find our form in the DOM using its class name.
+  //const form = document.getElementByClassName('experiment-form')[0];
+
+  // Get the form data with our (yet to be defined) function.
+  //const data = getFormDataAsJSON(form);
+  //import serialize from 'form-serialize';
+
+  //const formData = serialize(formNode, { hash: true });
+  // var form = document.querySelector('#experiment-form');
+  //
+  // var str = serialize(form);
+  // // str -> "foo=bar"
+  // echo (str);
+  //
+  // var obj = serialize(form, { hash: true });
+  // // obj -> { foo: 'bar' }
+  // echo(obj);
+
+  //TO DO: COMPLETE FORM TO JSON 
+  </script>
 </body>
 </html>
